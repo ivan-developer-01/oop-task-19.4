@@ -41,3 +41,5 @@ let computer = new Computer(16, 8, 2400);
 
 console.log(deskLamp);
 console.log(computer);
+
+console.log(deskLamp.listProperties());
