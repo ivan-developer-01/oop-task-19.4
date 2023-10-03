@@ -4,4 +4,8 @@ function ElectricalAppliance() {
 	this.turnOn = function() {
 		this.isTurnedOn = true;
 	};
+
+	this.turnOff = function() {
+		this.isTurnedOn = false;
+	};
 }
