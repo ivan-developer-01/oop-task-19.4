@@ -20,8 +20,9 @@ function DeskLamp(brightnessLevel) {
 
 DeskLamp.prototype = new ElectricalAppliance();
 
-function Computer(ram, cores) {
+function Computer(ram, cores, fanSpeed) {
 	this.powerNeeded = 600;
 	this.ram = ram || 2;
 	this.cores = cores || 2;
+	this.fanSpeed = fanSpeed || 1000;
 }
