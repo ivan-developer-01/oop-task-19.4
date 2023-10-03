@@ -22,5 +22,5 @@ DeskLamp.prototype = new ElectricalAppliance();
 
 function Computer(ram) {
 	this.powerNeeded = 600;
-	this.ram = ram | 2;
+	this.ram = ram || 2;
 }
