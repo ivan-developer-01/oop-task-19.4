@@ -14,5 +14,5 @@ function ElectricalAppliance() {
 }
 
 function DeskLamp() {
-	
+	this.powerNeeded = 60;
 }
