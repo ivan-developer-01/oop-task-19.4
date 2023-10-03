@@ -13,6 +13,7 @@ function ElectricalAppliance() {
 	this.powerNeeded = null;
 }
 
-function DeskLamp() {
+function DeskLamp(brightnessLevel) {
 	this.powerNeeded = 60;
+	this.brightnessLevel = brightnessLevel || 10;
 }
