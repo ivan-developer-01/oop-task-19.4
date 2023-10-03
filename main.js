@@ -21,5 +21,5 @@ function DeskLamp(brightnessLevel) {
 DeskLamp.prototype = new ElectricalAppliance();
 
 function Computer() {
-	
+	this.powerNeeded = 600;
 }
