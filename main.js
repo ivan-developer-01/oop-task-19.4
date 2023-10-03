@@ -19,3 +19,7 @@ function DeskLamp(brightnessLevel) {
 }
 
 DeskLamp.prototype = new ElectricalAppliance();
+
+function Computer() {
+	
+}
