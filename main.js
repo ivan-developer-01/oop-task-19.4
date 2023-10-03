@@ -8,4 +8,6 @@ function ElectricalAppliance() {
 	this.turnOff = function() {
 		this.isTurnedOn = false;
 	};
+
+	this.powerNeeded = null;
 }
