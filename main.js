@@ -13,9 +13,17 @@ function ElectricalAppliance() {
 	this.powerNeeded = null;
 
 	this.listProperties = function() {
+		let propertiesString = "";
+
 		for (let property in this) {
-			console.log(property + ": " + this[property]);
+			if (typeof this[property] === "function") {
+				continue;
+			}
+
+			propertiesString += property + ": " + this[property] + "\n";
 		}
+
+		return propertiesString.slice(0, -1);
 	};
 }
 
