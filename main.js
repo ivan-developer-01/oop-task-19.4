@@ -43,3 +43,4 @@ console.log(deskLamp);
 console.log(computer);
 
 console.log(deskLamp.listProperties());
+console.log(computer.listProperties());
