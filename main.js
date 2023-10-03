@@ -11,6 +11,12 @@ function ElectricalAppliance() {
 
 	// The power is supposed to be in Watts and to be a number
 	this.powerNeeded = null;
+
+	this.listProperties = function() {
+		for (let property in this) {
+			console.log(property + ": " + this[property]);
+		}
+	};
 }
 
 function DeskLamp(brightnessLevel) {
