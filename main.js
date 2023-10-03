@@ -37,3 +37,4 @@ Computer.prototype = new ElectricalAppliance();
 
 // Create an instances
 let deskLamp = new DeskLamp(8);
+let computer = new Computer(16, 8, 2400);
