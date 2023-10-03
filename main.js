@@ -51,4 +51,5 @@ console.log(deskLamp);
 console.log(computer);
 
 console.log(deskLamp.listProperties());
+console.log("\n");
 console.log(computer.listProperties());
