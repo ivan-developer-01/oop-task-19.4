@@ -34,3 +34,6 @@ function Computer(ram, cores, fanSpeed) {
 }
 
 Computer.prototype = new ElectricalAppliance();
+
+// Create an instances
+let deskLamp = new DeskLamp(8);
