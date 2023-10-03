@@ -26,3 +26,5 @@ function Computer(ram, cores, fanSpeed) {
 	this.cores = cores || 2;
 	this.fanSpeed = fanSpeed || 1000;
 }
+
+Computer.prototype = new ElectricalAppliance();
