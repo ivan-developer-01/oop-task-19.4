@@ -52,6 +52,14 @@ class Computer extends ElectricalAppliance {
 		this.cores = cores;
 		this.fanSpeed = fanSpeed;
 	}
+
+	setFanSpeed(fanSpeed) {
+		if (fanSpeed > 10000) {
+			throw new RangeError("Fan speed cannot be higher than 10000 or the computer will fly away!");
+		}
+
+		this.fanSpeed = fanSpeed;
+	}
 }
 
 // Create an instances
@@ -70,6 +78,16 @@ deskLamp.setBrightnessLevel(50);
 console.log(deskLamp.brightnessLevel);
 try {
 	deskLamp.setBrightnessLevel(1000);
+} catch (error) {
+	console.error(error.message);
+}
+
+
+console.log(computer.fanSpeed);
+computer.setFanSpeed(2000);
+console.log(computer.fanSpeed);
+try {
+	computer.setFanSpeed(11000);
 } catch (error) {
 	console.error(error.message);
 }
