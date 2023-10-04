@@ -28,12 +28,12 @@ class ElectricalAppliance {
 	}
 }
 
-function DeskLamp(brightnessLevel) {
-	this.powerNeeded = 60;
-	this.brightnessLevel = brightnessLevel || 10;
+class DeskLamp extends ElectricalAppliance {
+	constructor(brightnessLevel = 10) {
+		this.powerNeeded = 60;
+		this.brightnessLevel = brightnessLevel;
+	}
 }
-
-DeskLamp.prototype = new ElectricalAppliance();
 
 function Computer(ram, cores, fanSpeed) {
 	this.powerNeeded = 600;
