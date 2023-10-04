@@ -30,6 +30,13 @@ function ElectricalAppliance() {
 function DeskLamp(brightnessLevel) {
 	this.powerNeeded = 60;
 	this.brightnessLevel = brightnessLevel || 10;
+	this.setBrightnessLevel = function(brightnessLevel) {
+		if (brightnessLevel > 100) {
+			throw new RangeError("Brightness level cannot be higher than 100 or the lamp will be destroyed!");
+		}
+
+		this.brightnessLevel = brightnessLevel;
+	};
 }
 
 DeskLamp.prototype = new ElectricalAppliance();
@@ -53,3 +60,12 @@ console.log(computer);
 console.log(deskLamp.listProperties());
 console.log("\n");
 console.log(computer.listProperties());
+
+console.log(deskLamp.brightnessLevel);
+deskLamp.setBrightnessLevel(50);
+console.log(deskLamp.brightnessLevel);
+try {
+	deskLamp.setBrightnessLevel(1000);
+} catch (error) {
+	console.error(error.message);
+}

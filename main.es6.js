@@ -34,6 +34,14 @@ class DeskLamp extends ElectricalAppliance {
 		this.powerNeeded = 60;
 		this.brightnessLevel = brightnessLevel;
 	}
+
+	setBrightnessLevel(brightnessLevel) {
+		if (brightnessLevel > 100) {
+			throw new RangeError("Brightness level cannot be higher than 100 or the lamp will be destroyed!");
+		}
+
+		this.brightnessLevel = brightnessLevel;
+	}
 }
 
 class Computer extends ElectricalAppliance {
@@ -56,3 +64,12 @@ console.log(computer);
 console.log(deskLamp.listProperties());
 console.log("\n");
 console.log(computer.listProperties());
+
+console.log(deskLamp.brightnessLevel);
+deskLamp.setBrightnessLevel(50);
+console.log(deskLamp.brightnessLevel);
+try {
+	deskLamp.setBrightnessLevel(1000);
+} catch (error) {
+	console.error(error.message);
+}
