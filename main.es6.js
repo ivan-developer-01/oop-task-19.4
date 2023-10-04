@@ -35,14 +35,14 @@ class DeskLamp extends ElectricalAppliance {
 	}
 }
 
-function Computer(ram, cores, fanSpeed) {
-	this.powerNeeded = 600;
-	this.ram = ram || 2;
-	this.cores = cores || 2;
-	this.fanSpeed = fanSpeed || 1000;
+class Computer extends ElectricalAppliance {
+	constructor(ram = 2, cores = 2, fanSpeed = 1000) {
+		this.powerNeeded = 600;
+		this.ram = ram;
+		this.cores = cores;
+		this.fanSpeed = fanSpeed;
+	}
 }
-
-Computer.prototype = new ElectricalAppliance();
 
 // Create an instances
 let deskLamp = new DeskLamp(8);
