@@ -30,6 +30,7 @@ class ElectricalAppliance {
 
 class DeskLamp extends ElectricalAppliance {
 	constructor(brightnessLevel = 10) {
+		super();
 		this.powerNeeded = 60;
 		this.brightnessLevel = brightnessLevel;
 	}
@@ -37,6 +38,7 @@ class DeskLamp extends ElectricalAppliance {
 
 class Computer extends ElectricalAppliance {
 	constructor(ram = 2, cores = 2, fanSpeed = 1000) {
+		super();
 		this.powerNeeded = 600;
 		this.ram = ram;
 		this.cores = cores;
